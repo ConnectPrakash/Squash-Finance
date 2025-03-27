@@ -1,0 +1,132 @@
+* {
+    font-size: 700;
+    font-family: "Montserrat", sans-serif;
+}
+
+.signin .Bgfinance-logo {
+    font-family: "Cabin", sans-serif;
+    width: 200px;
+}
+
+.signin .custom-heading {
+    font-family: "Prompt", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #39335E;
+}
+
+.signin .custom-text {
+    color: #696F8C;
+    font-weight: 400;
+    font-size: 15px;
+    margin-block: 40px !important;
+}
+
+.signin .input-group {
+    background-color: #F6F6F6 !important;
+    height: 50px;
+    border-radius: 1rem;
+}
+
+.signin .input-group img {
+    width: 20px;
+}
+
+.signin .input-group-text {
+    border: none;
+    background-color: #F6F6F6;
+}
+
+.signin .input-group-text img {
+    width: 30px;
+}
+
+.signin .form-control {
+    border: none;
+    background-color: #F6F6F6;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 1px solid #B0B3B9;
+}
+
+.form-check-label {
+    color: #757575;
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.btn {
+    border:none;
+}
+.custom-btn {
+    height: 50px;
+    background-color: #3629B7 !important; /* Primary button color */
+    color: white !important;
+    font-size: 16px;  /* Ensures readability */
+    font-weight: 500 !important; /* Slightly bold for better emphasis */
+    border: none; /* Removes default border */
+    border-radius: 8px; /* Soft rounded corners */
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+.custom-btn:hover {
+    background-color: #3529b7c1 !important; /* Slightly transparent on hover */
+    transform: translateY(-2px); /* Adds a subtle lift effect */
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #696F8C;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #696F8C;
+    margin: 0 10px;
+}
+
+.custom-btn-gle {
+    background-color: #F6F6F6 !important; /* Light gray background */
+    border: none;
+    padding: 12px !important;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500 !important;
+    color: #696F8C !important;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out !important;
+}
+.custom-btn-gle span{
+translate: 25%;
+color: #696F8C !important;
+}
+.custom-btn-gle:hover {
+background-color: #e2e6ea !important; /* Slightly darker on hover */
+}
+.google-icon {
+    width: 24px; /* Ensure proper icon size */
+    height: auto;
+    margin-right: 20px;
+}
+.signin .custom-text-acc{
+    color:#757575;
+    font-weight: 400;
+    font-size: 14px;
+}
+.signin .custom-signin {
+    color: #FF4267;
+    font-weight: 600;
+}

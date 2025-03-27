@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* navbar name and height property */
+.navbar {
+    height: 100px;
+    padding: 0px !important;
+}
+
+.navbar-brand {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Style the dropdown item */
+/* Dropdown Menu */
+.dropdown-menu {
+    max-height: 300px;
+    /* Makes the dropdown scrollable */
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 100;
+}
+.dropdown button{
+    border: none;
+}
+/* Dropdown Items */
+.language-selector {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.language-selector img {
+    width: 24px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+/* Selected Flag */
+#selectedFlag img {
+    width: 24px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.flag {
+    width: 40px;
+    height: 20px;
+}
+
+
+/* Rotate dropdown arrow on open */
+.dropdown-toggle::after {
+    transition: transform 0.3s ease;
+}
+
+.show.dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* Profile Section */
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-profile .dropdown {
+    display: flex;
+    background-color: none !important;
+}
+
+.profile-img {
+    width: 100% !important;
+    height: 40px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+/* Notification Icon */
+.notification-icon {
+    font-size: 1.4rem;
+    color: #4a4a4a;
+    cursor: pointer;
+}
+
+/* Dropdown Menu */
+.user-profile .dropdown-menu {
+    min-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Main {
+    width: 100%;
+}
+
+.Main1 {
+    margin-bottom: 0px !important;
+    position: sticky;
+    /* Keeps it in place when scrolling */
+    top: 0;
+    /* Sticks to the top */
+    width: 100%;
+    z-index: 1000;
+    /* Ensures it stays above other content */
+    background-color: white;
+    /* Ensures background remains visible */
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    height: calc(100vh - 60px);
+    /* Adjust height dynamically */
+    overflow-y: auto;
+    /* Enables scrolling */
+    padding-inline: 20px;
+    background-color: #f8f9fa;
+    /* Ensures vertical scrolling if needed */
+}
+
+.hero-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-details {
+    background-color: #3629B7;
+    color: white;
+}
+
+.card-details:hover {
+    background-color: #3529b7bb;
+    color: white;
+}
+
+.cards-section-img img {
+    width: 100%;
+}
+
+
+.cards-section-empty {
+    background-color: #938eca;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-section-empty-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3629B7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-section-empty p {
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.cards-section-empty span {
+    color: #3629B7;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.table-container h5 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+}
+
+.status-active {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-paused {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-successful {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+/* Sidebar */
+
+/* Hide Sidebar on Small Screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        transform: translateX(-100%);
+        position: absolute;
+        z-index: 1000;
+    }
+}
+
+/* Show Sidebar when Active */
+.sidebar.active {
+    transform: translateX(0);
+}
+
+/* Menu Button (Dashboard-menu) */
+#menuToggle {
+    width: 40px;
+    /* Adjust size */
+    height: 40px;
+    cursor: pointer;
+    display: block;
+}
+@media (max-width:1024px) {
+    table thead tr{
+        font-size: 12px;
+    }
+    table tbody tr{
+        font-size: 10px;
+    }
+    table tbody tr td span{
+        font-size: 10px !important;
+    }
+    .hero{
+        padding-inline: 0px !important;
+    }
+}
+/* Position Menu Button for Mobile */
+@media (max-width: 768px) {
+    #menuToggle {
+        position: fixed;
+       
+        z-index: 1100;
+        background: white;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .hero {
+        margin: 0px !important;
+        padding-inline: 0px !important;
+    }
+
+    .container,
+    .container-sm {
+        max-width: 100%;
+    }
+    /* search bar */
+    .form-control{
+        width: 50% !important;
+    }
+}

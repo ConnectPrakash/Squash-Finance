@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Transition.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/Card.css">
+    <link rel="stylesheet" href="../../css/Sidebar.css">
+</head>
+
+<body>
+    <div class="d-flex bg-light Dashboard">
+        <!-- Sidebar -->
+        <div class="navbar-menu" id="menuToggle"><img src="../../asset/Bgfinance-menu_open.png" alt="nav-bar"> </div>
+
+        <nav class=" vh-100 sidebar" style="width:250px;" id="sidebar-container">
+            <h4 class="mb-4 p-3">
+                <img src="../../asset/Bgfinance-logo.png">
+                <img src="../../asset/Bgfinance-menu_open.png" class="Dashboard-menu">
+            </h4>
+            <ul class="nav flex-column">
+                <li class="nav-item" onclick="changePage('Accounts.html', 'Accounts')"><img
+                        src="../../asset/dashboard-element/dashboard.png"><a href="../../index.html" class="nav-link"
+                        data-page="Dashboard.html">Dashboard</a></li>
+                <li class="nav-item" onclick="changePage('Accounts.html', 'Accounts')"><img
+                        src="../../asset/dashboard-element/bank.png"><a href="../Dashboard/accounts.html"
+                        class="nav-link" data-page="accounts.html">Accounts</a></li>
+                <li class="nav-item " onclick="changePage('Cards.html', 'Cards')"><img
+                        src="../../asset/dashboard-element/note.png"><a href="../Dashboard/Cards.html" class="nav-link"
+                        data-page="cards.html">Cards</a>
+                </li>
+                <li class="nav-item active" onclick="changePage('Transaction.html', 'Transaction')"><img
+                        src="../../asset/dashboard-element/Transaction.png"><a href="../Dashboard/Transition.html"
+                        class="nav-link" data-page="transactions.html">Transactions</a></li>
+                <li class="nav-item" onclick="changePage('Payment.html', 'Payment')"><img
+                        src="../../asset/dashboard-element/Payment.png"><a href="../Dashboard/Payment.html"
+                        class="nav-link" data-page="payment.html">Payment</a></li>
+                <li class="nav-item" onclick="changePage('Transfers.html', 'Transfers')"><img
+                        src="../../asset/dashboard-element/Private-Transfer.png"><a
+                        href="../Dashboard/Private-Transfer.html" class="nav-link" data-page="transfers.html">Private
+                        Transfers</a></li>
+                <li class="nav-item" onclick="changePage('Invoicing.html', 'Invoicing')"><img
+                        src="../../asset/dashboard-element/Invoicing.png"><a href="../Dashboard/Invoicing.html"
+                        class="nav-link" data-page="invoicing.html">Invoicing</a></li>
+                <li class="nav-item" onclick="changePage('reports.html', 'Reports')"><img
+                        src="../../asset/dashboard-element/Reports.png"><a href="../Dashboard/Reports.html"
+                        class="nav-link" data-page="reports.html">Reports</a></li>
+                <li class="nav-item" onclick="changePage('Settings.html', 'Settings')"><img
+                        src="../../asset/dashboard-element/Setting.png"><a href="../Dashboard/Settings.html"
+                        class="nav-link" data-page="settings.html">Settings</a></li>
+                <li class="nav-item" onclick="changePage('Support.html', 'Support')"><img
+                        src="../../asset/dashboard-element/Setting.png"><a href="#" class="nav-link"
+                        data-page="support.html">Support</a></li>
+            </ul>
+        </nav>
+        <!-- Navbar Section -->
+        <div class="flex-grow-1 Main" style="width: 83%;">
+            <nav class="navbar navbar-light mb-4 Main1">
+                <div class="container-fluid">
+                    <span class="navbar-brand">
+
+                        <!-- write breadcrumb for each section -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0" id="breadcrumb">
+                                <li class="breadcrumb-item"><a href="Dashboard.html">Home</a></li>
+                            </ol>
+                        </nav>
+
+                    </span>
+                    <div class="d-flex">
+                        <!-- set the languaages -->
+                        <div class="d-flex justify-content-end align-items-center">
+                            <!-- Language Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="languageDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span id="selectedFlag">
+                                        <img src="https://flagcdn.com/w40/us.png" class="flag1" alt="Flag">
+                                    </span>
+                                    <span id="selectedLanguage">Eng (US)</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="languageDropdown" id="languageList"></ul>
+                            </div>
+                        </div>
+                        <!-- user Profile -->
+                        <div class="user-profile">
+                            <!-- Notification Icon -->
+                            <div class="me-3">
+                                <i class="bi bi-bell-fill notification-icon"></i>
+                            </div>
+
+                            <!-- Profile Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle d-flex align-items-center" type="button"
+                                    id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="https://randomuser.me/api/portraits/men/10.jpg" class="profile-img"
+                                        alt="Profile">
+                                    <span class="ms-2 profile-name">Courtney Henry</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="cards-section hero">
+                <div class="container">
+
+                    <div class="table-container">
+
+                        <!-- search bar -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <input type="text" id="searchInput" class="form-control w-25" placeholder="Search">
+                            <div>
+                            </div>
+                        </div>
+
+                        <div class="hero">
+
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5>Latest Transactions</h5>
+                            </div>
+
+                            <table class="table align-middle" id="transactionTable">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th><input type="checkbox"></th>
+                                        <th>Account Number</th>
+                                        <th>Date</th>
+                                        <th>Invoice</th>
+                                        <th>Medium</th>
+                                        <th>Transaction</th>
+                                        <th>Status</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>999 *** *** 127</td>
+                                        <td>2024-10-01</td>
+                                        <td>EUR</td>
+                                        <td>UniCredit</td>
+                                        <td>$8,521,212</td>
+                                        <td><span class="status-badge status-success">Successful</span></td>
+                                        <td><button class="btn btn-light">⋮</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>999 *** *** 128</td>
+                                        <td>2024-10-02</td>
+                                        <td>USD</td>
+                                        <td>UniCredit</td>
+                                        <td>$8,521,212</td>
+                                        <td><span class="status-badge status-success">Successful</span></td>
+                                        <td><button class="btn btn-light">⋮</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>999 *** *** 129</td>
+                                        <td>2024-10-03</td>
+                                        <td>USD</td>
+                                        <td>UniCredit</td>
+                                        <td>$8,521,212</td>
+                                        <td><span class="status-badge status-cancelled">Cancelled</span></td>
+                                        <td><button class="btn btn-light">⋮</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>999 *** *** 130</td>
+                                        <td>2024-10-04</td>
+                                        <td>EUR</td>
+                                        <td>UniCredit</td>
+                                        <td>$8,521,212</td>
+                                        <td><span class="status-badge status-pending">Pending</span></td>
+                                        <td><button class="btn btn-light">⋮</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>999 *** *** 131</td>
+                                        <td>2024-10-05</td>
+                                        <td>USD</td>
+                                        <td>UniCredit</td>
+                                        <td>$8,521,212</td>
+                                        <td><span class="status-badge status-success">Successful</span></td>
+                                        <td><button class="btn btn-light">⋮</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Pagination -->
+                            <nav>
+                                <ul class="pagination justify-content-end">
+                                    <li class="page-item"><a class="page-link" href="#">‹ Back</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next ›</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../../js/Sidebar.js"></script>
+    <script>
+        // set the language
+// Fetch and populate the language dropdown
+async function fetchLanguages() {
+  try {
+    const response = await fetch("https://restcountries.com/v3.1/all");
+    const countries = await response.json();
+
+    const languageList = document.getElementById("languageList");
+    languageList.innerHTML = ""; // Clear previous items
+
+    countries.forEach((country) => {
+      if (country.languages) {
+        const langKey = Object.keys(country.languages)[0]; // Get first language
+        const languageName = country.languages[langKey]; // Language name
+        const countryCode = country.cca2.toLowerCase(); // Country code for flag
+
+        // Create dropdown item
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `
+            <a class="dropdown-item language-selector" href="#">
+                <img src="https://flagcdn.com/w40/${countryCode}.png" class="flag" alt="Flag" width:40px; height:20px;>
+                <span>${languageName} (${country.cca2})</span>
+            </a>
+        `;
+
+        // Add click event to update selected language
+        listItem.addEventListener("click", () => {
+          document.getElementById("selectedFlag").innerHTML = `
+                <img src="https://flagcdn.com/w40/${countryCode}.png" class="flag" alt="Flag">
+            `;
+          document.getElementById(
+            "selectedLanguage"
+          ).textContent = `${languageName} (${country.cca2})`;
+        });
+
+        languageList.appendChild(listItem);
+      }
+    });
+
+    console.log("Dropdown items added:", languageList.innerHTML); // Debugging
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+
+fetchLanguages();
+    </script>
+</body>
+
+</html>

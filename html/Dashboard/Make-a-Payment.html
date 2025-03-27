@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make-a-Payment</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="../../css/Make-a-Payment.css">
+    <!-- sidebar css link -->
+    <link rel="stylesheet" href="../../css/Sidebar.css">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="d-flex bg-light Dashboard">
+        <!-- Sidebar  -->
+        <div class="navbar-menu" id="menuToggle"><img src="../../asset/Bgfinance-menu_open.png" alt="nav-bar"> </div>
+
+        <nav class=" vh-100 sidebar" style="width: 250px;" id="sidebar-container">
+            <h4 class="mb-4 p-3">
+                <img src="../../asset/Bgfinance-logo.png">
+                <img src="../../asset/Bgfinance-menu_open.png" class="Dashboard-menu">
+            </h4>
+            <ul class="nav flex-column">
+                <li class="nav-item " onclick="changePage('Accounts.html', 'Accounts')"><img
+                        src="../../asset/dashboard-element/dashboard.png"><a href="../../index.html" class="nav-link"
+                        data-page="Dashboard.html">Dashboard</a></li>
+                <li class="nav-item" onclick="changePage('Accounts.html', 'Accounts')"><img
+                        src="../../asset/dashboard-element/bank.png"><a href="../Dashboard/accounts.html"
+                        class="nav-link" data-page="accounts.html">Accounts</a></li>
+                <li class="nav-item" onclick="changePage('Cards.html', 'Cards')"><img
+                        src="../../asset/dashboard-element/note.png"><a href="../Dashboard/Cards.html" class="nav-link"
+                        data-page="cards.html">Cards</a>
+                </li>
+                <li class="nav-item" onclick="changePage('Transaction.html', 'Transaction')"><img
+                        src="../../asset/dashboard-element/Transaction.png"><a href="../Dashboard/Transition.html"
+                        class="nav-link" data-page="transactions.html">Transactions</a></li>
+                <li class="nav-item active" onclick="changePage('Payment.html', 'Payment')"><img
+                        src="../../asset/dashboard-element/Payment.png"><a href="../Dashboard/Payment.html"
+                        class="nav-link" data-page="payment.html">Payment</a></li>
+                <li class="nav-item" onclick="changePage('Transfers.html', 'Transfers')"><img
+                        src="../../asset/dashboard-element/Private-Transfer.png"><a
+                        href="../Dashboard/Private-Transfer.html" class="nav-link" data-page="transfers.html">Private
+                        Transfers</a></li>
+                <li class="nav-item " onclick="changePage('Invoicing.html', 'Invoicing')"><img
+                        src="../../asset/dashboard-element/Invoicing.png"><a href="../Dashboard/Invoicing.html"
+                        class="nav-link" data-page="invoicing.html">Invoicing</a></li>
+                <li class="nav-item" onclick="changePage('reports.html', 'Reports')"><img
+                        src="../../asset/dashboard-element/Reports.png"><a href="../Dashboard/Reports.html"
+                        class="nav-link" data-page="reports.html">Reports</a></li>
+                <li class="nav-item" onclick="changePage('Settings.html', 'Settings')"><img
+                        src="../../asset/dashboard-element/Setting.png"><a href="../Dashboard/Settings.html"
+                        class="nav-link" data-page="settings.html">Settings</a></li>
+                <li class="nav-item" onclick="changePage('Support.html', 'Support')"><img
+                        src="../../asset/dashboard-element/Setting.png"><a href="#" class="nav-link"
+                        data-page="support.html">Support</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="flex-grow-1 Main">
+            <nav class="navbar navbar-light mb-4 Main1">
+                <div class="container-fluid">
+                    <span class="navbar-brand">
+
+                        <!-- write breadcrumb for each section -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0" id="breadcrumb">
+                                <li class="breadcrumb-item"><a href="Dashboard.html">Payment</a></li>
+                            </ol>
+                        </nav>
+
+                    </span>
+                    <div class="d-flex">
+                        <!-- set the languaages -->
+                        <div class="d-flex justify-content-end align-items-center">
+                            <!-- Language Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="languageDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span id="selectedFlag">
+                                        <img src="https://flagcdn.com/w40/us.png" class="flag1" alt="Flag">
+                                    </span>
+                                    <span id="selectedLanguage">Eng (US)</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="languageDropdown" id="languageList"></ul>
+                            </div>
+                        </div>
+                        <!-- user Profile -->
+                        <div class="user-profile">
+                            <!-- Notification Icon -->
+                            <div class="me-3">
+                                <i class="bi bi-bell-fill notification-icon"></i>
+                            </div>
+
+                            <!-- Profile Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle d-flex align-items-center" type="button"
+                                    id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="https://randomuser.me/api/portraits/men/10.jpg" class="profile-img"
+                                        alt="Profile">
+                                    <span class="ms-2 profile-name">Courtney Henry</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Dashboard Cards -->
+            <div class="cards-section hero" id="content-container">
+
+                <div class="container d-grid hero-container">
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <input type="text" id="searchInput" class="form-control w-25" placeholder="Search">
+                        <div>
+                            <button class="btn " id="createAccountBtn">Exchange</button>
+                            <button class="btn active" id="accountOverviewBtn">Make a Payment</button>
+                        </div>
+                    </div>
+
+                    <div class="container mt-4">
+                        <div class="row g-4">
+                            <!-- Payment Overview Chart -->
+                            <div class="col-md-12 col-lg-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Payment Overview</h5>
+                                        <canvas id="paymentChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick Exchange Section -->
+                            <div class="col-md-12 col-lg-4">
+                                <div class="card  make-payment">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold card-body-head">Quick Exchange</h5>
+                                        <div class="make-payment-div">
+                                            <div class="exchange-box mb-3">
+                                                <div class="d-flex justify-content-between">
+                                                    <span>Spend</span>
+                                                    <span>Balance: 10,000 USD</span>
+                                                </div>
+                                                <hr>
+                                                <div class="exchange-box-div">
+                                                    <p> €USD</p>
+                                                    <input type="number" id="receiveAmount" placeholder="0.00">
+
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="swap-icon">
+                                                <img src="../../asset/Payment/transaction.png">
+                                            </div>
+
+                                            <div class="exchange-box mt-4">
+                                                <div class="d-flex justify-content-between">
+                                                    <span>Receive</span>
+                                                    <span>Balance: 10,000 USD</span>
+                                                </div>
+                                                <hr>
+                                                <div class="exchange-box-div">
+                                                    <p> €EURO</p>
+                                                    <input type="number" id="receiveAmount" placeholder="0.00">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="exchange-btn">Exchange Now</button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-4">
+                    <h4 class="fw-bold">Total Exchange</h4>
+                    <table class="table  table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>Currency</th>
+                                <th>Account</th>
+                                <th>Money</th>
+                                <th>Medium</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>EUR -> USD</td>
+                                <td>999 *** *** 127</td>
+                                <td>$8,000</td>
+                                <td>Cash Deposit</td>
+                                <td>2024-10-01</td>
+                                <td><span class="status active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>EUR -> USD</td>
+                                <td>999 *** *** 128</td>
+                                <td>$10,000</td>
+                                <td>Bank Transfer</td>
+                                <td>2024-10-02</td>
+                                <td><span class="status active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>EUR -> USD</td>
+                                <td>999 *** *** 129</td>
+                                <td>$8,000</td>
+                                <td>Bank Transfer</td>
+                                <td>2024-10-03</td>
+                                <td><span class="status cancelled">Cancelled</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>EUR -> USD</td>
+                                <td>999 *** *** 130</td>
+                                <td>$18,000</td>
+                                <td>Bank Transfer</td>
+                                <td>2024-10-04</td>
+                                <td><span class="status paused">Paused</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>EUR -> USD</td>
+                                <td>999 *** *** 131</td>
+                                <td>$10,000</td>
+                                <td>Direct Deposit</td>
+                                <td>2024-10-05</td>
+                                <td><span class="status successful">Successful</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../../js/Make-a-Payment.js"></script>
+    <script src="../../js/Sidebar.js"></script>
+
+</body>
+
+</html>

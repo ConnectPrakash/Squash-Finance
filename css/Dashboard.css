@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+body{
+   height: 100%;
+   overflow: hidden;
+}
+.Dashboard{
+    width: 100%;
+    height: 100%;
+}
+/* navbar name and height property */
+.navbar{
+    height: 100px;
+    padding:0px !important;
+}
+.navbar-brand{
+   font-size: 14px;
+    font-weight: 700;
+}
+/* set up the Languages  */
+
+/* Style the dropdown item */
+/* Dropdown Menu */
+.dropdown-menu {
+    max-height: 300px; /* Makes the dropdown scrollable */
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 100;
+}
+.dropdown button{
+    border: none;
+}
+/* Dropdown Items */
+.language-selector {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.language-selector img {
+    width: 24px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+/* Selected Flag */
+#selectedFlag img {
+    width: 24px;
+    height: 16px;
+    margin-right: 5px;
+}
+.flag {
+    width: 40px !important;
+    height: 20px !important;
+}
+/* Rotate dropdown arrow on open */
+.dropdown-toggle::after {
+    transition: transform 0.3s ease;
+}
+
+.show.dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* Profile Section */
+.user-profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-profile .dropdown{
+    display: flex;
+    background-color: none !important;
+}
+.profile-img {
+    width:100% !important;
+    height: 40px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+/* Notification Icon */
+.notification-icon {
+    font-size: 1.4rem;
+    color: #4a4a4a;
+    cursor: pointer;
+}
+
+/* Dropdown Menu */
+.user-profile .dropdown-menu {
+    min-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h5{
+    color: #474D66;
+    font-weight: 600;
+    opacity: 70%;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+.card h2{
+    color: #474D66;
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+
+}
+.card p {
+    padding-bottom: 10px;
+    color:#474D66;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+}
+.card p img{
+    width: 24px;
+}
+.card p span{
+    color:#52BD94
+}
+.Main1{
+    margin-bottom: 0px !important;
+    position: sticky; /* Keeps it in place when scrolling */
+    top: 0; /* Sticks to the top */
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other content */
+    background-color: white; /* Ensures background remains visible */
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.Main{
+    width:100%;
+}
+.hero {
+    height: 100vh; /* Adjust height dynamically */
+    overflow-y: auto; /* Enables scrolling */
+    padding-inline: 20px;
+    background-color: #f8f9fa;/* Ensures vertical scrolling if needed */
+}
+.progress-circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.progress-circle svg {
+    transform: rotate(-90deg);
+}
+
+.progress-circle circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.progress-background {
+    stroke: #e5e5e5;
+}
+
+.progress-bar {
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1s ease-in-out, stroke 1s ease-in-out;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+}
+.hero .handle-text{
+    color:#283D56;
+    font-weight: 700;
+    font-size: 20px;
+}
+.dashboard-canvas{
+    height: 260px !important;
+}
+.hero .canvas{
+    background-color: white;
+    padding:20px;
+}
+
+.latest-transaction{
+    margin-top: 40px;
+    background-color: white;
+    padding: 10px;
+}
+.latest-transaction h5{
+    color:#39335E;
+    font-weight: 700;
+    font-size: 20px;
+}
+table tr{
+    height: 60px;
+}
+table thead th{
+    color:#283D56 !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+}
+table tbody tr td{
+    color:#474D66 !important;
+    font-weight: 400;
+}
+thead tr {
+    background-color: #E6E8F0 !important;
+}
+.badge1{
+    background-color: rgba(0, 128, 0, 0.189);
+}
+.badge2{
+    background-color: rgba(255, 255, 0, 0.224);
+}
+.badge3{
+    background-color: rgba(255, 0, 0, 0.183);
+}
+.badge4{
+    background-color: rgba(0, 128, 0, 0.276);
+}
+
+
+/* Sidebar */
+
+/* Hide Sidebar on Small Screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        transform: translateX(-100%);
+        position: absolute;
+        z-index: 1000;
+    }
+}
+
+/* Show Sidebar when Active */
+.sidebar.active {
+    transform: translateX(0);
+}
+
+/* Menu Button (Dashboard-menu) */
+#menuToggle {
+    width: 40px; /* Adjust size */
+    height: 40px;
+    cursor: pointer;
+    display: block;
+}
+
+/* Position Menu Button for Mobile */
+@media (max-width: 768px) {
+    #menuToggle {
+        position: fixed;
+    
+        z-index: 1100;
+        background: white;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .hero{
+        padding-inline: 0px !important;
+    }
+}

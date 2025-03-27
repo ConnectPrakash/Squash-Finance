@@ -1,0 +1,177 @@
+*{
+    font-size: 700;
+    font-family: "Montserrat", sans-serif;
+
+}
+.signup .Bgfinance-logo{
+    font-family: "Cabin", sans-serif;
+    width: 200px;
+}
+.signup .custom-heading {
+    font-size: 24px; 
+    font-weight: 700; 
+}
+.signup .custom-text{
+    color: #696F8C;
+    font-weight: 400;
+    margin-block: 40px !important;
+}
+.signup .input-group{
+    background-color: #F6F6F6 !important;
+    height: 50px;
+    border-radius: 1rem;
+}
+.signup .input-group img{
+    width: 20px;
+}
+.signup .input-group-text {
+    border: none;
+    background-color: #F6F6F6;
+}
+.signup .input-group-text img{
+width: 30px;  
+}
+.signup .form-control {
+    border: none;
+    background-color: #F6F6F6;
+}
+
+.btn {
+    border:none;
+}
+.custom-btn {
+    height: 50px;
+    background-color: #3629B7 !important; /* Primary button color */
+    color: white !important;
+    font-size: 16px;  /* Ensures readability */
+    font-weight: 500 !important; /* Slightly bold for better emphasis */
+    border: none; /* Removes default border */
+    border-radius: 8px; /* Soft rounded corners */
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.custom-btn:hover {
+    background-color: #3529b7c1 !important; /* Slightly transparent on hover */
+    transform: translateY(-2px); /* Adds a subtle lift effect */
+}
+/* Toggle switch container */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+/* Hide default checkbox */
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider (the button) */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Default color */
+    border-radius: 22px;
+    transition: 0.4s;
+}
+
+/* Circle inside the slider */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* Toggle ON state */
+.toggle-switch input:checked + .slider {
+    background-color: #ff4668; /* Red color */
+}
+
+/* Move the circle when checked */
+.toggle-switch input:checked + .slider::before {
+    transform: translateX(23px);
+}
+
+.custom-forgot{
+    color: #757575 !important;
+}
+
+/* Remember Me text */
+.toggle-text {
+    font-size: 16px;
+    color: #696F8C;
+    margin-left: 10px;
+}
+.or-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #696F8C;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #696F8C;
+    margin: 0 10px;
+}
+
+.custom-btn-gle {
+    display: grid;
+     justify-content: center;
+    background-color: #F6F6F6 !important; /* Light gray background */
+    border: none;
+    padding: 12px !important;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500 !important;
+    color: #696F8C !important;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out !important;
+}
+.custom-btn-gle span{
+    color: #696F8C !important;
+}
+.custom-btn-gle:hover {
+    background-color: #e2e6ea !important; /* Slightly darker on hover */
+}
+
+.google-icon {
+    width: 24px; /* Ensure proper icon size */
+    height: auto;
+    margin-right: 20px;
+}
+.signup .custom-text-acc{
+    color:#757575;
+    font-weight: 400;
+    font-size: 14px;
+}
+.signup .custom-signin {
+    color: #FF4267;
+    font-weight: 600;
+}
+
+@media (max-width:768px) {
+    .custom-btn-gle span{
+        translate: 0%;
+    }
+}
